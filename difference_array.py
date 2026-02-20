@@ -1,6 +1,8 @@
 # learning difference array
 def difference_array(n, L, R):
-
+    if not (1 <= L < R <= n):
+        print("Invalid Array")
+        return []
     # Declaration of a difference array
     diff = [0] * (n + 2)
     
@@ -17,5 +19,5 @@ def difference_array(n, L, R):
 
     return arr[1:] # Because L should be >= 1, the result is to simplfy and ensure at L = 1, diff[1] = 1, diff[0] no value 
 
-print(difference_array(5, 7, 2))
+print(difference_array(10, 2, 7))
     
