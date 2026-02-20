@@ -11,5 +11,11 @@ def difference_array(n, L, R):
     arr = [0] * (n + 1) # Create the final array
     curr = 0
 
+    for i in range(1, n + 1):
+        curr += diff[i]
+        arr[i] = curr
+
     return arr[1:] # Because L should be >= 1, the result is to simplfy and ensure at L = 1, diff[1] = 1, diff[0] no value 
+
+print(difference_array(5, 7, 2))
     
